@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1b2536" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Dark Background & Grid -->
+  <rect width="800" height="500" fill="#0b0f17" />
+  <rect width="800" height="500" fill="url(#grid)" />
+
+  <!-- Title / Overlay Header -->
+  <text x="25" y="35" fill="#00e5ff" font-family="monospace" font-size="14" font-weight="bold">AI LABMATE // BREADBOARD VIEW - CAM_01</text>
+  <text x="750" y="35" fill="#10b981" font-family="monospace" font-size="12" text-anchor="end">STATUS: CAPTURED [FREEZE FRAME]</text>
+  <line x1="25" y1="45" x2="775" y2="45" stroke="#1d2738" stroke-width="2"/>
+
+  <!-- Breadboard Representation -->
+  <rect x="150" y="80" width="500" height="340" rx="12" fill="#151b26" stroke="#2a384f" stroke-width="3"/>
+  <rect x="170" y="100" width="460" height="300" rx="6" fill="#111620" stroke="#1d2738" stroke-width="1"/>
+
+  <!-- Bus Rails -->
+  <line x1="190" y1="120" x2="610" y2="120" stroke="#ef4444" stroke-width="3" stroke-dasharray="8 4"/>
+  <text x="180" y="124" fill="#ef4444" font-family="monospace" font-size="12" font-weight="bold">+</text>
+  
+  <line x1="190" y1="135" x2="610" y2="135" stroke="#3b82f6" stroke-width="3" stroke-dasharray="8 4"/>
+  <text x="180" y="139" fill="#3b82f6" font-family="monospace" font-size="12" font-weight="bold">-</text>
+
+  <line x1="190" y1="365" x2="610" y2="365" stroke="#ef4444" stroke-width="3" stroke-dasharray="8 4"/>
+  <line x1="190" y1="380" x2="610" y2="380" stroke="#3b82f6" stroke-width="3" stroke-dasharray="8 4"/>
+
+  <!-- Breadboard Tie Pin Holes Grid -->
+  <g fill="#1f293d">
+    <!-- Row holes -->
+    <circle cx="230" cy="180" r="3"/><circle cx="260" cy="180" r="3"/><circle cx="290" cy="180" r="3"/><circle cx="320" cy="180" r="3"/><circle cx="350" cy="180" r="3"/><circle cx="380" cy="180" r="3"/><circle cx="410" cy="180" r="3"/><circle cx="440" cy="180" r="3"/><circle cx="470" cy="180" r="3"/><circle cx="500" cy="180" r="3"/><circle cx="530" cy="180" r="3"/><circle cx="560" cy="180" r="3"/>
+    <circle cx="230" cy="200" r="3"/><circle cx="260" cy="200" r="3"/><circle cx="290" cy="200" r="3"/><circle cx="320" cy="200" r="3"/><circle cx="350" cy="200" r="3"/><circle cx="380" cy="200" r="3"/><circle cx="410" cy="200" r="3"/><circle cx="440" cy="200" r="3"/><circle cx="470" cy="200" r="3"/><circle cx="500" cy="200" r="3"/><circle cx="530" cy="200" r="3"/><circle cx="560" cy="200" r="3"/>
+    <circle cx="230" cy="220" r="3"/><circle cx="260" cy="220" r="3"/><circle cx="290" cy="220" r="3"/><circle cx="320" cy="220" r="3"/><circle cx="350" cy="220" r="3"/><circle cx="380" cy="220" r="3"/><circle cx="410" cy="220" r="3"/><circle cx="440" cy="220" r="3"/><circle cx="470" cy="220" r="3"/><circle cx="500" cy="220" r="3"/><circle cx="530" cy="220" r="3"/><circle cx="560" cy="220" r="3"/>
+    <!-- Divider -->
+    <rect x="190" y="240" x2="610" width="420" height="20" fill="#090c12"/>
+    <circle cx="230" cy="280" r="3"/><circle cx="260" cy="280" r="3"/><circle cx="290" cy="280" r="3"/><circle cx="320" cy="280" r="3"/><circle cx="350" cy="280" r="3"/><circle cx="380" cy="280" r="3"/><circle cx="410" cy="280" r="3"/><circle cx="440" cy="280" r="3"/><circle cx="470" cy="280" r="3"/><circle cx="500" cy="280" r="3"/><circle cx="530" cy="280" r="3"/><circle cx="560" cy="280" r="3"/>
+    <circle cx="230" cy="300" r="3"/><circle cx="260" cy="300" r="3"/><circle cx="290" cy="300" r="3"/><circle cx="320" cy="300" r="3"/><circle cx="350" cy="300" r="3"/><circle cx="380" cy="300" r="3"/><circle cx="410" cy="300" r="3"/><circle cx="440" cy="300" r="3"/><circle cx="470" cy="300" r="3"/><circle cx="500" cy="300" r="3"/><circle cx="530" cy="300" r="3"/><circle cx="560" cy="300" r="3"/>
+  </g>
+
+  <!-- Power Wire (Red +5V) -->
+  <path d="M 230 120 Q 230 150 260 180" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Resistor R1 -->
+  <path d="M 260 180 L 320 180 M 380 180 L 440 180" stroke="#d97706" stroke-width="3"/>
+  <rect x="320" y="172" width="60" height="16" rx="4" fill="#d97706" stroke="#fbbf24" stroke-width="1.5"/>
+  <!-- Resistor Color Bands 220 Ohm: Red, Red, Brown, Gold -->
+  <rect x="330" y="172" width="4" height="16" fill="#ef4444"/>
+  <rect x="340" y="172" width="4" height="16" fill="#ef4444"/>
+  <rect x="350" y="172" width="4" height="16" fill="#78350f"/>
+  <rect x="368" y="172" width="4" height="16" fill="#f59e0b"/>
+
+  <!-- LED Component (REVERSED) -->
+  <path d="M 440 180 L 470 180 M 510 180 L 530 180" stroke="#64748b" stroke-width="3"/>
+  <!-- LED Body -->
+  <circle cx="490" cy="180" r="16" fill="#991b1b" stroke="#f87171" stroke-width="2" opacity="0.8"/>
+  <path d="M 482 170 L 482 190" stroke="#f87171" stroke-width="3" stroke-linecap="round"/> <!-- Flat Notch Flat line facing left (REVERSED) -->
+  
+  <!-- Ground Wire (Blue GND) -->
+  <path d="M 530 180 Q 550 250 530 380" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- AI Detection Bounding Boxes & Markers -->
+  <!-- Component 1: Resistor Bounding Box -->
+  <rect x="305" y="160" width="90" height="40" fill="none" stroke="#00e5ff" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <rect x="305" y="145" width="85" height="15" fill="#00e5ff"/>
+  <text x="310" y="156" fill="#07090c" font-family="monospace" font-size="10" font-weight="bold">R1: 220Ω (91%)</text>
+
+  <!-- Component 2: LED Bounding Box WITH FAULT HIGHLIGHT -->
+  <rect x="425" y="150" width="95" height="60" fill="rgba(244, 63, 94, 0.15)" stroke="#f43f5e" stroke-width="2"/>
+  <rect x="425" y="135" width="130" height="15" fill="#f43f5e"/>
+  <text x="430" y="146" fill="#ffffff" font-family="monospace" font-size="10" font-weight="bold">⚠ FAULT: REVERSED LED</text>
+
+  <!-- Measured Probes Overlay -->
+  <g opacity="0.95">
+    <!-- Red probe -->
+    <path d="M 440 230 L 440 188" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <circle cx="440" cy="185" r="4" fill="#ef4444"/>
+    <rect x="400" y="230" width="70" height="20" rx="3" fill="#111827" stroke="#ef4444" stroke-width="1"/>
+    <text x="408" y="244" fill="#ef4444" font-family="monospace" font-size="10" font-weight="bold">V+ [4.98V]</text>
+
+    <!-- Black probe -->
+    <path d="M 530 230 L 530 188" stroke="#00e5ff" stroke-width="2.5"/>
+    <circle cx="530" cy="185" r="4" fill="#00e5ff"/>
+    <rect x="500" y="230" width="70" height="20" rx="3" fill="#111827" stroke="#00e5ff" stroke-width="1"/>
+    <text x="508" y="244" fill="#00e5ff" font-family="monospace" font-size="10" font-weight="bold">V- [0.01V]</text>
+  </g>
+
+  <!-- Diagnostic Callout Overlay -->
+  <g transform="translate(240, 310)">
+    <rect width="320" height="65" rx="6" fill="#0f172a" stroke="#ffb000" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="15" y="22" fill="#ffb000" font-family="monospace" font-size="12" font-weight="bold">● DIAGNOSTIC FINDING: POLARITY MISMATCH</text>
+    <text x="15" y="42" fill="#cbd5e1" font-family="monospace" font-size="11">LED Anode wired to GND. Conduction blocked.</text>
+    <text x="15" y="56" fill="#00e5ff" font-family="monospace" font-size="10">REMEDY: Rotate LED 180° so long pin faces R1.</text>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "id": "arduino_sensor",
+  "title": "DEMO 3: Arduino Sensor Wiring Fault",
+  "tagline": "DHT11 sensor pinout inverted (VCC & GND reversed)",
+  "circuit_image": "/demo_arduino_sensor.svg",
+  "measurements": [
+    { "id": "m1", "nodeName": "Sensor VCC Pin", "voltage": "0.04 V", "current": "82.5 mA", "resistance": "Swapped" },
+    { "id": "m2", "nodeName": "Sensor GND Pin", "voltage": "4.92 V", "current": "82.5 mA", "resistance": "Swapped" }
+  ],
+  "question": "Why is my temperature sensor returning timeout errors and getting uncomfortably warm?",
+  "expected_diagnostic": {
+    "status": "CRITICAL_FAULT",
+    "fault_category": "Power Rail Swap / Thermal Overload Risk",
+    "confidence": "High",
+    "likely_cause": "Power (5V) and Ground (GND) connections are swapped on the sensor pins."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "resistor_issue",
+  "title": "DEMO 2: Resistor Value Mismatch",
+  "tagline": "Dim LED caused by 10kΩ resistor instead of 220Ω",
+  "circuit_image": "/demo_resistor.svg",
+  "measurements": [
+    { "id": "m1", "nodeName": "Power Rail (+5V)", "voltage": "5.00 V", "current": "0.34 mA", "resistance": "Open" },
+    { "id": "m2", "nodeName": "Resistor R1", "voltage": "3.35 V", "current": "0.34 mA", "resistance": "9,850 Ω (10kΩ)" }
+  ],
+  "question": "Why is my LED extremely dim and barely visible?",
+  "expected_diagnostic": {
+    "status": "POTENTIAL_FAULT",
+    "fault_category": "Incorrect Component Value",
+    "confidence": "High",
+    "likely_cause": "Resistor R1 value is 10kΩ instead of 220Ω, choking current to 0.34 mA."
+  }
+}

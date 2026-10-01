@@ -1,0 +1,17 @@
+{
+  "id": "led_polarity",
+  "title": "DEMO 1: LED Polarity Swap",
+  "tagline": "5V breadboard circuit with reversed diode polarity",
+  "circuit_image": "/demo_led_polarity.svg",
+  "measurements": [
+    { "id": "m1", "nodeName": "Power Rail (VCC)", "voltage": "5.02 V", "current": "0.00 mA", "resistance": "Open" },
+    { "id": "m2", "nodeName": "LED Terminals", "voltage": "0.01 V", "current": "0.00 mA", "resistance": "High" }
+  ],
+  "question": "Why isn't my LED turning on when 5V power is supplied?",
+  "expected_diagnostic": {
+    "status": "POTENTIAL_FAULT",
+    "fault_category": "Polarity Mismatch / Wiring Error",
+    "confidence": "High",
+    "likely_cause": "LED diode polarity is reversed (Anode connected to GND, Cathode to +5V rail)."
+  }
+}

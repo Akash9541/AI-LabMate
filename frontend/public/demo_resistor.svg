@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1b2536" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Dark Background -->
+  <rect width="800" height="500" fill="#0b0f17" />
+  <rect width="800" height="500" fill="url(#grid)" />
+
+  <!-- Title / Overlay Header -->
+  <text x="25" y="35" fill="#00e5ff" font-family="monospace" font-size="14" font-weight="bold">AI LABMATE // BREADBOARD VIEW - CAM_01</text>
+  <text x="750" y="35" fill="#10b981" font-family="monospace" font-size="12" text-anchor="end">DEMO 2: RESISTOR VALUE INSPECTION</text>
+  <line x1="25" y1="45" x2="775" y2="45" stroke="#1d2738" stroke-width="2"/>
+
+  <!-- Breadboard -->
+  <rect x="150" y="80" width="500" height="340" rx="12" fill="#151b26" stroke="#2a384f" stroke-width="3"/>
+  <rect x="170" y="100" width="460" height="300" rx="6" fill="#111620" stroke="#1d2738" stroke-width="1"/>
+
+  <!-- Bus Rails -->
+  <line x1="190" y1="120" x2="610" y2="120" stroke="#ef4444" stroke-width="3" stroke-dasharray="8 4"/>
+  <line x1="190" y1="135" x2="610" y2="135" stroke="#3b82f6" stroke-width="3" stroke-dasharray="8 4"/>
+
+  <!-- Power Wire (Red +5V) -->
+  <path d="M 230 120 Q 230 150 260 180" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Resistor R1 (10k Ohm color: Brn Blk Org Gold) -->
+  <path d="M 260 180 L 320 180 M 380 180 L 440 180" stroke="#d97706" stroke-width="3"/>
+  <rect x="320" y="172" width="60" height="16" rx="4" fill="#d97706" stroke="#fbbf24" stroke-width="1.5"/>
+  <!-- Resistor Color Bands 10k Ohm: Brown, Black, Orange, Gold -->
+  <rect x="330" y="172" width="4" height="16" fill="#78350f"/>
+  <rect x="340" y="172" width="4" height="16" fill="#000000"/>
+  <rect x="350" y="172" width="4" height="16" fill="#f97316"/>
+  <rect x="368" y="172" width="4" height="16" fill="#f59e0b"/>
+
+  <!-- LED Component (Correct Polarity, but Dim) -->
+  <path d="M 440 180 L 470 180 M 510 180 L 530 180" stroke="#64748b" stroke-width="3"/>
+  <circle cx="490" cy="180" r="16" fill="#7f1d1d" stroke="#ef4444" stroke-width="2" opacity="0.6"/>
+  <path d="M 498 170 L 498 190" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Ground Wire (Blue GND) -->
+  <path d="M 530 180 Q 550 250 530 380" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Bounding Boxes -->
+  <rect x="305" y="150" width="95" height="55" fill="rgba(255, 176, 0, 0.15)" stroke="#ffb000" stroke-width="2"/>
+  <rect x="305" y="135" width="140" height="15" fill="#ffb000"/>
+  <text x="310" y="146" fill="#07090c" font-family="monospace" font-size="10" font-weight="bold">⚠ R1 VALUE MISMATCH (10kΩ)</text>
+
+  <!-- Diagnostic Callout Overlay -->
+  <g transform="translate(240, 310)">
+    <rect width="320" height="65" rx="6" fill="#0f172a" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="15" y="22" fill="#ffb000" font-family="monospace" font-size="12" font-weight="bold">● DIAGNOSTIC FINDING: EXCESS RESISTANCE</text>
+    <text x="15" y="42" fill="#cbd5e1" font-family="monospace" font-size="11">R1 is 10kΩ instead of required 220Ω.</text>
+    <text x="15" y="56" fill="#00e5ff" font-family="monospace" font-size="10">Current choked to 0.34 mA (Target: 15 mA).</text>
+  </g>
+</svg>

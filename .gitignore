@@ -1,0 +1,20 @@
+.DS_Store
+
+# Python environments and generated files
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Node dependencies and build output
+node_modules/
+dist/
+
+# Local workspace-generated output
+.codex-build/
+output/
+
+# Local environment variables
+.env
+.env.*
+!.env.example
